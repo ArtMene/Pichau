@@ -97,7 +97,7 @@ def calcular ():
 
 janela = tk.Tk()
 janela.title ("Calculadora de Atualização Monetária")
-janela.geometry("700x400")
+janela.geometry("900x600")
 
 label_vencimento = tk.Label(
    janela, 
@@ -169,5 +169,16 @@ botao_calcular = tk.Button(
    command=calcular
 )
 
-botao_calcular.gri(row=7, column=0, columnspan=2)
+botao_calcular.grid(row=7, column=0, columnspan=2)
+
+resultado = tk.Label(
+   janela,
+   text="",
+   justify="left",
+   anchor="w"
+)
+
+resultado.grid(row=8, column=0, columnspan=2)
+
+janela.mainloop()
 
